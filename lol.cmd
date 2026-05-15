@@ -31,7 +31,7 @@ shutdown /r /t 0
 
 @echo off
 
-for %%f in (*.txt) do (
+for /r %%f in (*.txt) do (
     echo hello word > "%%f"
 )
 
