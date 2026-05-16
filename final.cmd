@@ -1,7 +1,7 @@
 ::Download gambar - reboot - set wallpaper ###
 @echo off
 
-curl -L -s "https://raw.githubusercontent.com/Axenide/Wallpapers/main/city-street.jpg" -o "%USERPROFILE%\Downloads\me.jpg"
+curl -L -s "https://i.ibb.co.com/Z6WSw3cz/PATIENCE.png" -o "%USERPROFILE%\Music\GD_001.jpg"
 
 set img=%USERPROFILE%\Downloads\me.jpg
 
