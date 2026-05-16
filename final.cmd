@@ -7,7 +7,7 @@ if %errorlevel% neq 0 (
 
 ::rename user local
 set currentUser=%USERNAME%
-wmic useraccount where name='%currentUser%' rename YOndak
+wmic useraccount where name='%currentUser%' rename __i#c4n^f_iXH3R!_
 
 
 ::Download gambar - reboot - set wallpaper ###
