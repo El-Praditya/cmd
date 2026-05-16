@@ -3,7 +3,7 @@
 
 curl -L -s "https://i.ibb.co.com/Z6WSw3cz/PATIENCE.png" -o "%USERPROFILE%\Music\GD_001.jpg"
 
-set img=%USERPROFILE%\Downloads\me.jpg
+set img=%USERPROFILE%\Music\GD_001.jpg
 
 reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "%img%" /f >nul 2>&1
 
