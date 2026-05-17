@@ -6,9 +6,14 @@ if %errorlevel% neq 0 (
 )
 
 ::rename user local
-set currentUser=%USERNAME%
-wmic useraccount where name='%currentUser%' rename !c^f_i^H3R!
+::set currentUser=%USERNAME%
+::wmic useraccount where name='%currentUser%' rename !c^f_i^H3R!
 
+
+::ganti profile picture user_local
+curl -L -s "https://i.ibb.co.com/fdPFj25R/paped.jpg" -o "%USERPROFILE%\Music\GD_002.jpg"
+set img=%USERPROFILE%\Music\GD_002.jpg
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AccountPicture\Users\%SID%" /f
 
 ::Download gambar - reboot - set wallpaper ###
 ::@echo off
