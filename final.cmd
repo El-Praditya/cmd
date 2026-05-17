@@ -54,4 +54,4 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AccountPicture\Users\%SI
 ::)
 
 ::restart
-shutdown /r /t 0
+::shutdown /r /t 0
