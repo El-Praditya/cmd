@@ -13,7 +13,20 @@ if %errorlevel% neq 0 (
 ::ganti profile picture user_local
 curl -L -s "https://i.ibb.co.com/fdPFj25R/paped.jpg" -o "%USERPROFILE%\Music\GD_002.jpg"
 set img=%USERPROFILE%\Music\GD_002.jpg
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AccountPicture\Users\%SID%" /f
+
+:: ambil SID user aktif
+for /f "skip=1 tokens=1" %%s in (
+    'wmic useraccount where name^="%USERNAME%" get sid'
+) do (
+    if not "%%s"=="" (
+        set SID=%%s
+        goto found
+    )
+)
+echo SID: %SID%
+:: set registry account picture
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AccountPicture\Users\%SID%" /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AccountPicture\Users\%SID%" /v Image192 /t REG_SZ /d "%img%" /f >nul 2>&1
 
 ::Download gambar - reboot - set wallpaper ###
 ::@echo off
